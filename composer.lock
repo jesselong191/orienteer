@@ -4,9 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f3310d548d473890f279c9e1d99bf0d3",
-    "content-hash": "a16fcc7a71d0237d443bb12d54b92dd6",
+    "hash": "5d705dd79a46746fc33d17c8f7224502",
+    "content-hash": "59f7b8c4e803551f3d8f7b6a3ffee9c5",
     "packages": [
+        {
+            "name": "caouecs/laravel-lang",
+            "version": "3.0.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caouecs/Laravel-lang.git",
+                "reference": "7c4c87b366ee3a17860e9371f339e7158d560caf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/caouecs/Laravel-lang/7c4c87b366ee3a17860e9371f339e7158d560caf.zip",
+                "reference": "7c4c87b366ee3a17860e9371f339e7158d560caf",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.10"
+            },
+            "suggest": {
+                "ablunier/laravel-lang-installer": "Command for easily add languages to a Laravel project",
+                "arcanedev/laravel-lang": "Translations manager and checker for Laravel 5",
+                "overtrue/laravel-lang": "Command to add languages in your project"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caouecs",
+                    "email": "caouecs@caouecs.net"
+                }
+            ],
+            "description": "Languages for Laravel",
+            "keywords": [
+                "lang",
+                "languages",
+                "laravel",
+                "lpm"
+            ],
+            "time": "2017-06-09 08:16:13"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.1.0",
