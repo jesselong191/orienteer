@@ -11,6 +11,17 @@ use App\Models\User;
 use Auth;
 class UsersController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', [
+            'only' => ['edit', 'update']
+        ]);
+        //只让未登录用户访问注册页面：
+        $this->middleware('guest', [
+           'only' => ['create']
+       ]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -75,7 +86,10 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        //用户授权验证数据
+        $this->authorize('update', $user);
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -87,7 +101,18 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->validate($request, [
+           'name' => 'required|max:50',
+           'password' => 'required|confirmed|min:6'
+       ]);
+
+       $user = User::findOrFail($id);
+       $user->update([
+           'name' => $request->name,
+           'password' => bcrypt($request->password),
+       ]);
+
+       return redirect()->route('users.show', $id);
     }
 
     /**
