@@ -29,7 +29,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::paginate(20);
+       return view('users.index', compact('users'));
     }
 
     /**
@@ -123,6 +124,9 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $user = User::findOrFail($id);
+      $user->delete();
+      session()->flash('success', '成功删除用户！');
+      return back();
     }
 }
