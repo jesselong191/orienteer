@@ -195,11 +195,12 @@ section.user_info {
   }
 }
 /* ------------------------------Users index --------------------------*/
-.
-.
-.
 .delete-btn {
   float: right;
   position: relative;
   right: 0;
+}
+
+.alert-status {
+  @extend .alert-info;
 }

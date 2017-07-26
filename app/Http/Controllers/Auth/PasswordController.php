@@ -20,6 +20,9 @@ class PasswordController extends Controller
 
     use ResetsPasswords;
 
+//将默认重定向地址改为 /
+    protected $redirectPath = '/';
+
     /**
      * Create a new password controller instance.
      *

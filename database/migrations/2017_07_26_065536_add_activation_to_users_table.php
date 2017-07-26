@@ -26,8 +26,8 @@ class AddActivationToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('activation_token');
-            $table->dropColumn('activated');
+          $table->dropColumn('activation_token');
+          $table->dropColumn('activated');
         });
     }
 }
