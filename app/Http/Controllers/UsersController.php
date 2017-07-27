@@ -78,7 +78,12 @@ class UsersController extends Controller
     {
         //
         $user = User::findOrFail($id);
-        return view('users.show', compact('user'));
+        //获取用户动态
+        $statuses = $user->statuses()
+                           ->orderBy('created_at', 'desc')
+                           ->paginate(10);
+        //compact 方法可以同时接收多个参数，在上面代码我们将用户数据 $user 和 动态数据 $statuses 同时传递给用户个人页面的视图上。
+        return view('users.show', compact('user', 'statuses'));
     }
 
     /**

@@ -7,11 +7,22 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\Status;
+use Auth;
+
 class StaticPagesController extends Controller
 {
   public function home()
     {
-        return view('layouts.home');
+      //空数组 feed_items 来保存微博动态数据。
+        $feed_items = [];
+        //确保当前用户已进行登录时才从数据库读取数据。
+       if (Auth::check()) {
+         //feed方法获取动态
+           $feed_items = Auth::user()->feed()->paginate(10);
+       }
+
+       return view('layouts.home', compact('feed_items'));
     }
 
     public function help()

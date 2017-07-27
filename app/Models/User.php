@@ -53,4 +53,17 @@ class User extends Model implements AuthenticatableContract,
          });
      }
 
+     // 用户动态
+     public function statuses()
+    {
+        return $this->hasMany(Status::class);
+    }
+
+    //feed 方法，该方法将当前用户发布过的所有动态从数据库中取出，并根据创建时间来倒序排序。
+    public function feed()
+     {
+         return $this->statuses()
+                     ->orderBy('created_at', 'desc');
+     }
+
 }
