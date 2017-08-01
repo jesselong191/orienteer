@@ -38,3 +38,10 @@ Route::post('password/reset', 'Auth\PasswordController@postReset')->name('passwo
 
 //动态相关操作
 Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
+//获取关注的人
+Route::get('/users/{id}/followings', 'UsersController@followings')->name('users.followings');
+//获取我的粉丝
+Route::get('/users/{id}/followers', 'UsersController@followers')->name('users.followers');
+//关注操作
+Route::post('/users/followers/{id}', 'FollowersController@store')->name('followers.store');
+Route::delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.destroy');
