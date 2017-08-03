@@ -5741,6 +5741,11 @@ textarea {
   resize: vertical; }
 
 .jumbotron {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #eee;
+  margin-bottom: 30px;
+  color: inherit;
   text-align: center; }
 
 /* typography */
@@ -5766,8 +5771,11 @@ p {
   line-height: 1.7em; }
 
 /*-------------------------------------- header---------------------- */
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff; }
+
 .navbar-inverse {
-  background-color: #3c3e42; }
+  background-color: #ec9433; }
 
 #logo {
   float: left;
@@ -5780,6 +5788,9 @@ p {
   font-weight: bold; }
   #logo:hover {
     color: #fff; }
+
+#searching {
+  height: 0; }
 
 #logout {
   cursor: default; }
@@ -5958,5 +5969,7 @@ aside textarea {
   margin: 0 auto;
   display: block;
   margin-top: 25px; }
+
+/*---------------------- navbar-------------------------------- */
 
 /*# sourceMappingURL=app.css.map */

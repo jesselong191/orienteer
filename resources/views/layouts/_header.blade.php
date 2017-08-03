@@ -1,8 +1,14 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
     <div class="col-md-offset-1 col-md-10">
-      <a href="/" id="logo">Sample App</a>
-      <nav>
+      <div id="navbar" class="navbar-collapse collapse">
+        <div class="navbar-header">
+          <a href="/"  id="logo">爱圈内定向越野管理平台</a>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">社区</a></li>
+          <li><a href="#">问答</a></li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
           @if (Auth::check())
             <li><a href="{{ route('users.index') }}">用户列表</a></li>
@@ -30,7 +36,10 @@
             <li><a href="{{ route('login') }}">登录</a></li>
           @endif
         </ul>
-      </nav>
+          <form id="searching" class="nav navbar-form navbar-right" method="post">
+            <input type="text"  class="form-control"  placeholder="search..."  >
+          </form>
+      </div>
     </div>
   </div>
-</header>
+</nav>

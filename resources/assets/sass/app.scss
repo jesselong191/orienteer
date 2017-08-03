@@ -2,7 +2,8 @@
 
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-$navbar-color: #3c3e42;
+
+$navbar-color: rgb(236,148,51);
 
 /* universal */
 
@@ -19,6 +20,11 @@ textarea {
 }
 
 .jumbotron {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #eee;
+  margin-bottom: 30px;
+  color: inherit;
   text-align: center;
 }
 
@@ -50,7 +56,9 @@ p {
 }
 
 /*-------------------------------------- header---------------------- */
-
+.navbar-inverse .navbar-nav > li > a{
+  color: #fff;
+}
 .navbar-inverse {
   background-color: $navbar-color;
 }
@@ -67,6 +75,9 @@ p {
   &:hover {
     color: #fff;
   }
+}
+#searching{
+  height: 0;
 }
 #logout {
   cursor: default;
@@ -307,3 +318,5 @@ aside {
   display: block;
   margin-top: 25px;
 }
+
+/*---------------------- navbar-------------------------------- */
