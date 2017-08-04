@@ -2,9 +2,9 @@
 
 @section('content')
   @if (Auth::check())
-    @include('layouts._sidebar')
     <div class="row">
-      <div class="col-md-8">
+      @include('layouts._sidebar')
+      <div class="col-md-6">
         <section class="status_form">
           @include('shared.status_form')
         </section>
