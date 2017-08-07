@@ -320,3 +320,10 @@ aside {
 }
 
 /*---------------------- navbar-------------------------------- */
+.active{
+    background-color: $navbar-color;
+  }
+
+.active a{
+  color: #fff;
+}

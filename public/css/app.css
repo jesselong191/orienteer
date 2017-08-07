@@ -5971,5 +5971,10 @@ aside textarea {
   margin-top: 25px; }
 
 /*---------------------- navbar-------------------------------- */
+.active {
+  background-color: #ec9433; }
+
+.active a {
+  color: #fff; }
 
 /*# sourceMappingURL=app.css.map */

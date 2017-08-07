@@ -1,4 +1,4 @@
-<div class="col-sm-12 col-md-2 sidebar">
+<div class="col-sm-12 col-md-3 sidebar">
   <ul class="nav nav-sidebar">
     <li class="active"><a href="#">动态 <span class="sr-only">(current)</span></a></li>
     <li><a href="#">reports</a></li>
